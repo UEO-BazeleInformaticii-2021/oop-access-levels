@@ -1,11 +1,10 @@
-﻿using OopAccessLevels.Library;
-using System;
+﻿using System;
 
-namespace OopAccessLevels.App
+namespace OopAccessLevels.Library
 {
-    class Program
+    public class Parking
     {
-        static void Main(string[] args)
+        public void PrintDetailsOfTheCarsFromParking()
         {
             Car car1 = new Car();
             // private members of the Car NOT accessible here
@@ -14,8 +13,8 @@ namespace OopAccessLevels.App
             // protected members of the Car NOT accessible here
             // car1.BodyStyle
 
-            // internal members NOT accessible here
-            // Console.WriteLine($"Car1 identification number: {car1.VIN}");
+            // internal members ARE accessible here
+            Console.WriteLine($"Car1 identification number: {car1.VIN}");
 
             // public members ARE accessible here
             Console.WriteLine($"Car1 registration number: {car1.RegistrationNumber}");
